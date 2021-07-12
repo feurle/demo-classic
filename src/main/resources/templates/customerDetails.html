@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Customer Details</h1>
+<p th:text="'id: ' + ${customer.id}" />
+<p th:text="'First Name: ' + ${customer.firstName}" />
+<p th:text="'Last Name: ' + ${customer.lastName}" />
+<a href="/customer">Submit another message</a>
+</body>
+</html>
