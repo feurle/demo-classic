@@ -9,4 +9,6 @@ public interface CustomerRepository extends CrudRepository<Customer,Long> {
 
         List<Customer> findAll();
 
+        Customer findCustomerById(Long id);
+
 }

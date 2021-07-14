@@ -6,9 +6,9 @@
 </head>
 <body>
 <h1>Customer Details</h1>
-<p th:text="'id: ' + ${customer.id}" />
-<p th:text="'First Name: ' + ${customer.firstName}" />
-<p th:text="'Last Name: ' + ${customer.lastName}" />
-<a href="/customer">Submit another message</a>
+<p>Id:  <span th:text="${customer.id}" /></p>
+<p>First Name:<span th:text="${customer.firstName}" /> </p>
+<p>Last Name:<span th:text="${customer.lastName}"/> </p>
+<a href="/customer/list">Show all customers</a>
 </body>
 </html>

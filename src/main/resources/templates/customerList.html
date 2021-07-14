@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<table>
+<table border="1">
     <thead>
     <tr>
         <th> Fist Name </th>
@@ -21,11 +21,16 @@
     <tr th:each="customer : ${customerList}">
         <td><span th:text="${customer.firstName}"> abs </span></td>
         <td><span th:text="${customer.lastName}"> dsf </span></td>
-        <td><a th:href="@{'/customer/delete/' + ${customer.id}}"> Delete </a> |  <a th:href="@{'/customer/view/' + ${customer.id}}"> View </a></td>
+        <td>
+            <a th:href="@{'/customer/view/' + ${customer.id}}"> View </a> |
+            <a th:href="@{'/customer/edit/' + ${customer.id}}"> Edit </a> |
+            <a th:href="@{'/customer/delete/' + ${customer.id}}"> Delete </a> |
+        </td>
     </tr>
     </tbody>
 </table>
 
+<p><a href="/customer/new">Add new customer</a></p>
 
 </body>
 </html>
