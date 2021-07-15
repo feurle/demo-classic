@@ -84,7 +84,7 @@ public class CustomerController {
     }
 
 
-    @GetMapping("/customer/{customerId}")
+    @GetMapping("/customer/view/{customerId}")
     public String viewCustomer(@PathVariable("customerId") Long id, Model model) {
         Customer customer = customerRepository.findCustomerById(id);
         logger.info("Found customer {}", customer);
